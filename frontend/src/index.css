@@ -1,0 +1,64 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+}
+
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    font-family: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: rgb(29, 28, 28);
+    width: 100%;
+    min-height: 100%;
+}
+
+main {
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-inline: 1rem;  
+}
+
+
+
