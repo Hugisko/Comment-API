@@ -9,11 +9,9 @@ app.listen(port, () => {
   console.log(`listening at ${port}`);
 });
 
-app.get("/", async (req, res) => {
-  console.log(process.env.FETCH_URL);
+app.get("/data", async (req, res) => {
   try {
-    const response = await fetch(process.env.FETCH_URL);
-    
+    const response = await fetch(process.env.FETCH_URL); 
     if (response.ok) {
       const data = await response.json();
       res.json({
