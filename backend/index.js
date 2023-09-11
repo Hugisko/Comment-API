@@ -11,7 +11,7 @@ app.listen(port, () => {
 
 app.get("/", async (req, res) => {
   try {
-    const response = await fetch(process.env.FETCH_URL);
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/1/comments");
     if (response.ok) {
       const data = await response.json();
       res.json({
