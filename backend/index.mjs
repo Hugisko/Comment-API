@@ -2,10 +2,10 @@ import axios from "axios";
 import express from "express";
 import cors from "cors";
 import dotevn from "dotenv";
+dotevn.config();
 
 const port = process.env.PORT || 5000;
 const app = express();
-dotevn.config();
 
 app.use(cors());
 app.listen(port, () => {
