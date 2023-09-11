@@ -10,7 +10,7 @@ function App() {
 
   const options = {
     method: 'GET',
-    url: 'https://comment-api-backend.onrender.com/data',
+    url: 'https://comment-api-vufj.onrender.com/data',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -20,9 +20,11 @@ function App() {
     setLoading(true);
     try {
       const resp = await fetch(options.url,options);
-      const data = await resp.json();
-      setComments(data.body);
-      setLoading(false);
+      const data = await resp.json();   
+      if(data.status === 'success'){
+        setComments(data.body);
+        setLoading(false);
+      }
     } catch (error) {
       setLoading(false);
       console.log(error);

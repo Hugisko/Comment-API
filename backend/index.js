@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 const express = require("express");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
@@ -9,9 +10,7 @@ app.listen(port, () => {
   console.log(`listening at ${port}`);
 });
 
-console.log(process.env.FETCH_URL)
-
-app.get("/data", async (req, res) => {  
+app.get("/data", async (req, res) => {
   try {
     const response = await fetch(process.env.FETCH_URL); 
     if (response.ok) {
