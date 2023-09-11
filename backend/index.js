@@ -9,7 +9,7 @@ app.listen(port, () => {
   console.log(`listening at ${port}`);
 });
 
-app.get("https://comment-api-vufj.onrender.com/", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const response = await fetch(process.env.FETCH_URL);
     if (response.ok) {
