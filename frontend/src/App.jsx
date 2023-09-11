@@ -10,7 +10,7 @@ function App() {
 
   const options = {
     method: 'GET',
-    url: 'https://comment-api-vufj.onrender.com/',
+    url: 'https://comment-api-backend.onrender.com/',
     headers: {
       'Content-Type': 'application/json'
     },
